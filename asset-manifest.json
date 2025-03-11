@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Mouchie-Goodleaf-Productions/static/css/main.e9d97fcf.css",
+    "main.js": "/Mouchie-Goodleaf-Productions/static/js/main.0c321a80.js",
+    "static/js/453.a3884e72.chunk.js": "/Mouchie-Goodleaf-Productions/static/js/453.a3884e72.chunk.js",
+    "index.html": "/Mouchie-Goodleaf-Productions/index.html",
+    "main.e9d97fcf.css.map": "/Mouchie-Goodleaf-Productions/static/css/main.e9d97fcf.css.map",
+    "main.0c321a80.js.map": "/Mouchie-Goodleaf-Productions/static/js/main.0c321a80.js.map",
+    "453.a3884e72.chunk.js.map": "/Mouchie-Goodleaf-Productions/static/js/453.a3884e72.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9d97fcf.css",
+    "static/js/main.0c321a80.js"
+  ]
+}
