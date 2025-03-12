@@ -2,90 +2,174 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { getImageUrl } from '../utils/images';
 
-// Gallery images data
+// Gallery images data with updated references to real images
 const galleryImages = [
   {
     id: 1,
-    src: getImageUrl('gallery-1.jpg'),
-    alt: 'Wedding reception with DJ setup',
-    category: 'weddings',
+    src: getImageUrl('Garth_Brooks.jpeg'),
+    alt: 'Garth Brooks - Country music superstar',
+    category: 'contemporary',
     featured: true
   },
   {
     id: 2,
-    src: getImageUrl('gallery-2.jpg'),
-    alt: 'Corporate event with audience',
-    category: 'corporate',
-    featured: true
+    src: getImageUrl('Eric_Church.jpeg'),
+    alt: 'Eric Church in concert',
+    category: 'contemporary',
+    featured: false
   },
   {
     id: 3,
-    src: getImageUrl('gallery-3.jpg'),
-    alt: 'Birthday party celebration',
-    category: 'parties',
+    src: getImageUrl('Keith_Urban.jpeg'),
+    alt: 'Keith Urban performing live',
+    category: 'contemporary',
     featured: false
   },
   {
     id: 4,
-    src: getImageUrl('gallery-4.jpg'),
-    alt: 'DJ booth at nightclub',
-    category: 'nightlife',
+    src: getImageUrl('Faith_Hill-Tim_McGraw.jpeg'),
+    alt: 'Faith Hill and Tim McGraw - Country power couple',
+    category: 'contemporary',
     featured: true
   },
   {
     id: 5,
-    src: getImageUrl('gallery-5.jpg'),
-    alt: 'Sound equipment setup',
-    category: 'equipment',
+    src: getImageUrl('Brad_Paisley.jpeg'),
+    alt: 'Brad Paisley with his guitar',
+    category: 'contemporary',
     featured: false
   },
   {
     id: 6,
-    src: getImageUrl('gallery-6.jpg'),
-    alt: 'Wedding dance floor',
-    category: 'weddings',
+    src: getImageUrl('Luke_Bryan.jpeg'),
+    alt: 'Luke Bryan on stage',
+    category: 'contemporary',
     featured: false
   },
   {
     id: 7,
-    src: getImageUrl('gallery-7.jpg'),
-    alt: 'Corporate award ceremony',
-    category: 'corporate',
+    src: getImageUrl('Kenny_Chesney.jpeg'),
+    alt: 'Kenny Chesney concert experience',
+    category: 'contemporary',
     featured: false
   },
   {
     id: 8,
-    src: getImageUrl('gallery-8.jpg'),
-    alt: 'Outdoor festival performance',
-    category: 'festivals',
+    src: getImageUrl('Brett_Kissel.jpeg'),
+    alt: 'Brett Kissel - Canadian country star',
+    category: 'canadian',
     featured: true
   },
   {
     id: 9,
-    src: getImageUrl('gallery-9.jpg'),
-    alt: 'DJ equipment close-up',
-    category: 'equipment',
+    src: getImageUrl('Dierks_Bentley.jpeg'),
+    alt: 'Dierks Bentley performing',
+    category: 'contemporary',
     featured: false
   },
   {
     id: 10,
-    src: getImageUrl('gallery-10.jpg'),
-    alt: 'Club lighting setup',
-    category: 'nightlife',
+    src: getImageUrl('Little_Big_Town.jpeg'),
+    alt: 'Little Big Town - Award-winning country group',
+    category: 'groups',
     featured: false
   },
   {
     id: 11,
-    src: getImageUrl('gallery-11.jpg'),
-    alt: 'Private party event',
-    category: 'parties',
+    src: getImageUrl('Thompson_Square.jpeg'),
+    alt: 'Thompson Square duo',
+    category: 'groups',
     featured: false
   },
   {
     id: 12,
-    src: getImageUrl('gallery-12.jpg'),
-    alt: 'Music festival crowd',
-    category: 'festivals',
+    src: getImageUrl('Brooks_&_Dunn.jpeg'),
+    alt: 'Brooks & Dunn - Legendary country duo',
+    category: 'groups',
+    featured: true
+  },
+  {
+    id: 13,
+    src: getImageUrl('George_Jones.jpeg'),
+    alt: 'George Jones - Country music legend',
+    category: 'classic',
+    featured: true
+  },
+  {
+    id: 14,
+    src: getImageUrl('Tammy_Wynette.jpeg'),
+    alt: 'Tammy Wynette - First Lady of Country Music',
+    category: 'classic',
+    featured: false
+  },
+  {
+    id: 15,
+    src: getImageUrl('Merle_Haggard.jpeg'),
+    alt: 'Merle Haggard - Country music icon',
+    category: 'classic',
+    featured: false
+  },
+  {
+    id: 16,
+    src: getImageUrl('Marty_Haggard.jpeg'),
+    alt: 'Marty Haggard performing',
+    category: 'classic',
+    featured: false
+  },
+  {
+    id: 17,
+    src: getImageUrl('Georgette_Jones.jpeg'),
+    alt: 'Georgette Jones - Daughter of George Jones and Tammy Wynette',
+    category: 'classic',
+    featured: false
+  },
+  {
+    id: 18,
+    src: getImageUrl('Dwight_Yoakum.jpeg'),
+    alt: 'Dwight Yoakam - Country star with distinctive style',
+    category: 'classic',
+    featured: false
+  },
+  {
+    id: 19,
+    src: getImageUrl('The_Kentucky_Headhunters.jpeg'),
+    alt: 'The Kentucky Headhunters - Southern rock and country group',
+    category: 'groups',
+    featured: false
+  },
+  {
+    id: 20,
+    src: getImageUrl('Randy_Travis.jpeg'),
+    alt: 'Randy Travis - Influential country artist',
+    category: 'classic',
+    featured: false
+  },
+  {
+    id: 21,
+    src: getImageUrl('Charlie_Daniels.jpeg'),
+    alt: 'Charlie Daniels - Southern rock legend',
+    category: 'classic',
+    featured: false
+  },
+  {
+    id: 22,
+    src: getImageUrl('Dan_Rather.jpeg'),
+    alt: 'Dan Rather - Celebrated news anchor',
+    category: 'other',
+    featured: false
+  },
+  {
+    id: 23,
+    src: getImageUrl('Travis_Tritt.jpeg'),
+    alt: 'Travis Tritt performing',
+    category: 'contemporary',
+    featured: false
+  },
+  {
+    id: 24,
+    src: getImageUrl('Storm_Warren.jpeg'),
+    alt: 'Storm Warren - NBA player',
+    category: 'other',
     featured: false
   }
 ];
@@ -95,12 +179,12 @@ const GalleryPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   
   const filters = [
-    { id: 'all', label: 'All Events' },
-    { id: 'wedding', label: 'Weddings' },
-    { id: 'corporate', label: 'Corporate' },
-    { id: 'party', label: 'Parties' },
-    { id: 'club', label: 'Club Nights' },
-    { id: 'equipment', label: 'Equipment' }
+    { id: 'all', label: 'All Stars' },
+    { id: 'contemporary', label: 'Contemporary Country' },
+    { id: 'classic', label: 'Classic Country' },
+    { id: 'groups', label: 'Groups & Duos' },
+    { id: 'canadian', label: 'Canadian Artists' },
+    { id: 'other', label: 'Other Celebrities' }
   ];
   
   const filteredImages = activeFilter === 'all' 
@@ -138,9 +222,9 @@ const GalleryPage: React.FC = () => {
       <section className="relative py-20 bg-dark-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Event Gallery</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Country Music Stars</h1>
             <p className="text-xl text-gray-300">
-              Browse through photos from our past events and performances
+              Browse through photos of country music legends and stars I've had the pleasure to meet
             </p>
           </div>
         </div>
@@ -248,118 +332,24 @@ const GalleryPage: React.FC = () => {
             </button>
           </div>
           
-          <div className="max-w-5xl max-h-full overflow-auto">
-            {filteredImages.find(img => img.id === selectedImage) && (
-              <>
-                <img 
-                  src={filteredImages.find(img => img.id === selectedImage)?.src} 
-                  alt={filteredImages.find(img => img.id === selectedImage)?.alt}
-                  className="max-w-full max-h-[80vh] mx-auto rounded-lg"
-                />
-                <div className="text-center mt-4 text-white">
-                  <p className="text-xl">{filteredImages.find(img => img.id === selectedImage)?.alt}</p>
+          <div className="relative max-w-5xl max-h-full overflow-hidden">
+            {filteredImages.map(image => (
+              image.id === selectedImage && (
+                <div key={image.id} className="text-center">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="max-w-full max-h-[80vh] mx-auto" 
+                  />
+                  <div className="mt-4 text-white text-xl font-medium">
+                    <p>{image.alt}</p>
+                  </div>
                 </div>
-              </>
-            )}
+              )
+            ))}
           </div>
         </div>
       )}
-
-      {/* Video Section */}
-      <section className="py-16 bg-dark-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Performance Videos</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Watch Mouchie GoodLeaf in action at various events
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* These would be embedded videos, using placeholders */}
-            <div className="fade-in">
-              <div className="rounded-2xl overflow-hidden bg-dark-100">
-                <div className="aspect-video bg-dark-200 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Wedding DJ Highlight Reel</h3>
-                  <p className="text-gray-400">
-                    A compilation of magical moments from recent weddings.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="rounded-2xl overflow-hidden bg-dark-100">
-                <div className="aspect-video bg-dark-200 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Club Performance</h3>
-                  <p className="text-gray-400">
-                    Behind the decks at Velvet Nightclub's annual summer party.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="fade-in" style={{ animationDelay: '0.4s' }}>
-              <div className="rounded-2xl overflow-hidden bg-dark-100">
-                <div className="aspect-video bg-dark-200 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Mix Session</h3>
-                  <p className="text-gray-400">
-                    Studio session showcasing transitions and mixing techniques.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4">
-          <div className="bg-gradient-to-r from-primary-700 to-primary-500 rounded-3xl p-10 md:p-16">
-            <div className="max-w-3xl mx-auto text-center fade-in">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Want to See More?</h2>
-              <p className="text-xl text-white/90 mb-8">
-                Contact us for a personalized preview of events similar to the one you're planning.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="https://instagram.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border border-white/40"
-                >
-                  Follow on Instagram
-                </a>
-                <a 
-                  href="/contact" 
-                  className="btn bg-white text-primary-700 hover:bg-white/90"
-                >
-                  Contact Us
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 };

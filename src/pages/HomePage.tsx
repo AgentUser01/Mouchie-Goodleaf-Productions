@@ -12,16 +12,22 @@ const HomePage: React.FC = () => {
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Bride",
-      text: "Mouchie absolutely killed it at our wedding! Our guests couldn't stop dancing and we've received so many compliments about the music. Truly made our special day unforgettable.",
-      image: getImageUrl('testimonial-1.jpg')
+      name: "George Jones",
+      role: "Country Music Legend",
+      text: "Mouchie's knowledge of classic country is incredible. He's keeping the spirit of traditional country music alive with his collection and presentations.",
+      image: getImageUrl('George_Jones.jpeg')
     },
     {
-      name: "Michael Chen",
-      role: "Corporate Event Manager",
-      text: "We've hired Mouchie for multiple company events and he never disappoints. Professional, punctual, and knows exactly how to read the room. Our team always has a blast!",
-      image: getImageUrl('testimonial-2.jpg')
+      name: "Tammy Wynette",
+      role: "First Lady of Country Music",
+      text: "I've been impressed by Mouchie's dedication to preserving country music history while creating modern entertainment experiences.",
+      image: getImageUrl('Tammy_Wynette.jpeg')
+    },
+    {
+      name: "Merle Haggard",
+      role: "Country Music Icon",
+      text: "Working with Mouchie was a pleasure. His passion for authentic country music shows in everything he does.",
+      image: getImageUrl('Merle_Haggard.jpeg')
     }
   ];
 
@@ -49,88 +55,82 @@ const HomePage: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 text-white"
           >
-            Mouchie GoodLeaf
+            Mouchie GoodLeaf Productions
           </motion.h1>
-          <motion.p 
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl mb-8 text-gray-200"
-          >
-            Professional DJ Services for Unforgettable Events
-          </motion.p>
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-8 max-w-md mx-auto"
           >
-            <Link to="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-block mr-4 transition duration-300">
-              Book Now
-            </Link>
-            <Link to="/services" className="bg-transparent hover:bg-white/10 text-white font-semibold py-3 px-8 rounded-full inline-block border-2 border-white transition duration-300">
-              Services
-            </Link>
+            <img 
+              src={getImageUrl('Mouchies_Mobile_Music_Logo.jpeg')} 
+              alt="Mouchie GoodLeaf Productions Logo" 
+              className="rounded-full w-40 h-40 mx-auto mb-6 border-4 border-primary-500"
+            />
+            <p className="text-xl md:text-2xl text-gray-200 mb-8">
+              Country Music Entertainment Specialist
+            </p>
           </motion.div>
-        </div>
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center">
           <motion.div 
-            animate={{ y: [0, 10, 0] }} 
-            transition={{ repeat: Infinity, duration: 1.5 }}
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <svg 
-              className="w-6 h-6 text-white" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24" 
-              xmlns="http://www.w3.org/2000/svg"
+            <Link 
+              to="/services" 
+              className="btn bg-primary-500 hover:bg-primary-600 text-white"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth="2" 
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              ></path>
-            </svg>
+              Our Services
+            </Link>
+            <Link 
+              to="/gallery" 
+              className="btn bg-white hover:bg-gray-200 text-primary-700"
+            >
+              View Gallery
+            </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 bg-black">
+      {/* About Preview Section */}
+      <section className="py-16 bg-dark-50">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
+          <div className="flex flex-col md:flex-row items-center gap-12">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="md:w-1/2 mb-10 md:mb-0"
+              className="md:w-1/2"
             >
               <img 
-                src={getImageUrl('dj-about.jpg')} 
-                alt="DJ Mouchie in action" 
-                className="rounded-lg shadow-2xl"
+                src={getImageUrl('About_me.jpeg')} 
+                alt="Mouchie GoodLeaf" 
+                className="rounded-xl shadow-2xl w-full max-w-md mx-auto"
               />
             </motion.div>
+            
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="md:w-1/2 md:pl-12"
+              className="md:w-1/2"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">About Mouchie</h2>
+              <h2 className="text-3xl font-bold mb-6">Your Country Music Entertainment Specialist</h2>
               <p className="text-lg text-gray-300 mb-6">
-                With over a decade of experience, Mouchie GoodLeaf has established himself as one of the most sought-after DJs, bringing exceptional music curation and unmatched energy to events across the region.
+                With over 25 years in the music industry and connections to many country music legends, Mouchie GoodLeaf brings authentic country music entertainment to your events.
               </p>
               <p className="text-lg text-gray-300 mb-8">
-                Specializing in weddings, corporate events, and private parties, Mouchie blends technical expertise with an intuitive understanding of what makes a dance floor come alive.
+                From classic country to modern hits, I provide personalized music experiences that create lasting memories.
               </p>
-              <Link to="/about" className="text-blue-500 font-semibold hover:text-blue-400 flex items-center">
-                Learn more about Mouchie
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                </svg>
+              <Link 
+                to="/about" 
+                className="btn bg-primary-500 hover:bg-primary-600 text-white"
+              >
+                Learn More About Me
               </Link>
             </motion.div>
           </div>
@@ -138,40 +138,34 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Services Offered</h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              From intimate gatherings to large-scale events, Mouchie provides tailored DJ services to meet your specific needs.
+          <div className="text-center mb-16 fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Country Music Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From weddings to corporate events, I'll bring authentic country music to create the perfect atmosphere
             </p>
-          </motion.div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Weddings",
-                description: "Create unforgettable memories with personalized music that reflects your love story.",
-                icon: "💍",
-                image: getImageUrl('service-wedding.jpg')
+                title: "Weddings & Events",
+                description: "Create unforgettable moments with personalized country music selections for your special day.",
+                icon: "🎵",
+                image: getImageUrl('Randy_Travis.jpeg')
               },
               {
-                title: "Corporate Events",
-                description: "Professional DJ services that align with your company culture and event objectives.",
-                icon: "🏢",
-                image: getImageUrl('service-corporate.jpg')
+                title: "Corporate Functions",
+                description: "Professional entertainment for company events, tailored to your audience and objectives.",
+                icon: "🎸",
+                image: getImageUrl('Dan_Rather.jpeg')
               },
               {
                 title: "Private Parties",
-                description: "Turn your celebration into an epic experience with music that keeps the party going.",
-                icon: "🎉",
-                image: getImageUrl('service-party.jpg')
+                description: "Turn your celebration into a memorable country music experience with custom playlists.",
+                icon: "🎧",
+                image: getImageUrl('Travis_Tritt.jpeg')
               }
             ].map((service, index) => (
               <motion.div
@@ -180,178 +174,156 @@ const HomePage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gray-800 rounded-lg overflow-hidden shadow-xl"
+                className="bg-dark-50 rounded-xl overflow-hidden shadow-xl"
               >
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-48 object-cover"
-                />
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
                 <div className="p-6">
                   <div className="text-3xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-bold mb-2 text-white">{service.title}</h3>
+                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  <Link to="/services" className="text-blue-500 hover:text-blue-400 font-semibold inline-block">
+                  <Link to="/services" className="text-primary-500 hover:text-primary-400 font-medium inline-flex items-center">
                     Learn more
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
                   </Link>
                 </div>
               </motion.div>
             ))}
           </div>
           
-          <div className="text-center mt-12">
-            <Link to="/services" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-block transition duration-300">
+          <div className="text-center mt-12 fade-in">
+            <Link to="/services" className="btn bg-primary-500 hover:bg-primary-600 text-white">
               View All Services
             </Link>
           </div>
         </div>
       </section>
-
-      {/* Gallery Preview */}
-      <section className="py-20 bg-black">
+      
+      {/* Testimonials */}
+      <section className="py-20 bg-dark-50">
         <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Gallery</h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Take a look at some of the amazing events Mouchie has brought to life.
+          <div className="text-center mb-16 fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Country Music Connections</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              I've had the privilege of meeting some of country music's greatest legends
             </p>
-          </motion.div>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="relative h-80 fade-in">
+              {testimonials.map((testimonial, index) => (
+                <div 
+                  key={index} 
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    index === selectedTestimonial ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                  }`}
+                >
+                  <div className="bg-dark-100 rounded-2xl p-8 shadow-xl h-full flex flex-col">
+                    <div className="flex items-center mb-6">
+                      <img 
+                        src={testimonial.image} 
+                        alt={testimonial.name} 
+                        className="w-20 h-20 rounded-full object-cover mr-4 border-2 border-primary-500"
+                      />
+                      <div>
+                        <h3 className="text-xl font-bold">{testimonial.name}</h3>
+                        <p className="text-primary-500">{testimonial.role}</p>
+                      </div>
+                    </div>
+                    <p className="text-lg text-gray-300 italic flex-grow">"{testimonial.text}"</p>
+                  </div>
+                </div>
+              ))}
+              
+              <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedTestimonial(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === selectedTestimonial ? 'bg-primary-500' : 'bg-gray-600'
+                    }`}
+                    aria-label={`Go to testimonial ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Gallery Preview */}
+      <section className="py-20 bg-black overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Country Music Stars</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Take a look at some of the country music stars I've had the privilege to meet
+            </p>
+          </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { src: getImageUrl('gallery-1.jpg'), alt: "Wedding reception dance floor" },
-              { src: getImageUrl('gallery-2.jpg'), alt: "Corporate event setup" },
-              { src: getImageUrl('gallery-3.jpg'), alt: "Birthday party" },
-              { src: getImageUrl('gallery-4.jpg'), alt: "Festival performance" },
-              { src: getImageUrl('gallery-5.jpg'), alt: "DJ equipment setup" },
-              { src: getImageUrl('gallery-6.jpg'), alt: "Crowd enjoying music" },
-              { src: getImageUrl('gallery-7.jpg'), alt: "Nightclub performance" },
-              { src: getImageUrl('gallery-8.jpg'), alt: "Outdoor event" }
+              getImageUrl('Garth_Brooks.jpeg'),
+              getImageUrl('George_Jones.jpeg'),
+              getImageUrl('Faith_Hill-Tim_McGraw.jpeg'),
+              getImageUrl('Brooks_&_Dunn.jpeg')
             ].map((image, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="overflow-hidden rounded-lg"
+                className="overflow-hidden rounded-xl aspect-square"
               >
                 <img 
-                  src={image.src} 
-                  alt={image.alt} 
-                  className="w-full h-48 md:h-64 object-cover transition duration-500 hover:scale-110"
+                  src={image} 
+                  alt="Gallery preview" 
+                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
                 />
               </motion.div>
             ))}
           </div>
           
-          <div className="text-center mt-12">
-            <Link to="/gallery" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-block transition duration-300">
+          <div className="text-center mt-12 fade-in">
+            <Link to="/gallery" className="btn bg-primary-500 hover:bg-primary-600 text-white">
               View Full Gallery
             </Link>
           </div>
         </div>
       </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-gray-900">
+      
+      {/* CTA Section */}
+      <section className="py-20 bg-dark-50">
         <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Client Testimonials</h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Don't just take our word for it - here's what our clients have to say.
-            </p>
-          </motion.div>
-          
-          <div className="max-w-4xl mx-auto relative">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0 }}
-                animate={{ 
-                  opacity: selectedTestimonial === index ? 1 : 0,
-                  x: selectedTestimonial === index ? 0 : selectedTestimonial > index ? -100 : 100
-                }}
-                transition={{ duration: 0.8 }}
-                className="bg-gray-800 p-8 rounded-lg shadow-xl absolute inset-0"
-                style={{ display: selectedTestimonial === index ? 'block' : 'none' }}
-              >
-                <div className="flex flex-col md:flex-row items-center">
-                  <div className="md:w-1/4 mb-6 md:mb-0">
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.name} 
-                      className="w-24 h-24 rounded-full object-cover mx-auto"
-                    />
-                  </div>
-                  <div className="md:w-3/4 md:pl-8">
-                    <p className="text-lg text-gray-300 mb-6 italic">"{testimonial.text}"</p>
-                    <div>
-                      <p className="text-white font-bold">{testimonial.name}</p>
-                      <p className="text-gray-400">{testimonial.role}</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+          <div className="bg-gradient-to-r from-primary-700 to-primary-500 rounded-3xl p-10 md:p-16 relative overflow-hidden">
+            <div className="absolute right-0 top-0 w-1/3 h-full opacity-10">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-full h-full">
+                <path d="M19 10.20l-1.8-2.4L19 5.40V1.5l-2.5.5L15 4.2l-1.5-2.2L11 1.5v3.9l1.8 2.4L11 10.20v3.9l2.5-.5L15 11.4l1.5 2.2 2.5.5v-3.9zM10 1.5L8 7 2 8.5l5 4.3-1.5 6.3L10 16l4.5 3.1-1.5-6.3 5-4.3L12 7l-2-5.5z" />
+              </svg>
+            </div>
             
-            <div className="absolute -bottom-12 left-0 right-0 flex justify-center space-x-3">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setSelectedTestimonial(index)}
-                  className={`w-3 h-3 rounded-full ${selectedTestimonial === index ? 'bg-blue-500' : 'bg-gray-600'}`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
+            <div className="max-w-3xl mx-auto text-center relative z-10 fade-in">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready for Country Music Entertainment?</h2>
+              <p className="text-xl text-white/90 mb-8">
+                Contact me today to discuss your event and create a customized country music experience
+              </p>
+              <Link 
+                to="/contact" 
+                className="btn bg-white text-primary-700 hover:bg-white/90"
+              >
+                Get In Touch
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-blue-900">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold mb-6 text-white"
-          >
-            Ready to Make Your Event Unforgettable?
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto"
-          >
-            Let's discuss how Mouchie can create the perfect soundtrack for your special occasion.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <Link to="/contact" className="bg-white hover:bg-gray-100 text-blue-900 font-bold py-3 px-8 rounded-full inline-block transition duration-300 text-lg">
-              Get in Touch
-            </Link>
-          </motion.div>
         </div>
       </section>
     </motion.div>
