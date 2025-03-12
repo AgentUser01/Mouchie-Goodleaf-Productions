@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Mouchie-Goodleaf-Productions/static/css/main.a8a11a48.css",
-    "main.js": "/Mouchie-Goodleaf-Productions/static/js/main.ea0681ad.js",
+    "main.css": "/Mouchie-Goodleaf-Productions/static/css/main.fee6397c.css",
+    "main.js": "/Mouchie-Goodleaf-Productions/static/js/main.2ca06b05.js",
     "static/js/453.a3884e72.chunk.js": "/Mouchie-Goodleaf-Productions/static/js/453.a3884e72.chunk.js",
     "index.html": "/Mouchie-Goodleaf-Productions/index.html",
-    "main.a8a11a48.css.map": "/Mouchie-Goodleaf-Productions/static/css/main.a8a11a48.css.map",
-    "main.ea0681ad.js.map": "/Mouchie-Goodleaf-Productions/static/js/main.ea0681ad.js.map",
+    "main.fee6397c.css.map": "/Mouchie-Goodleaf-Productions/static/css/main.fee6397c.css.map",
+    "main.2ca06b05.js.map": "/Mouchie-Goodleaf-Productions/static/js/main.2ca06b05.js.map",
     "453.a3884e72.chunk.js.map": "/Mouchie-Goodleaf-Productions/static/js/453.a3884e72.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8a11a48.css",
-    "static/js/main.ea0681ad.js"
+    "static/css/main.fee6397c.css",
+    "static/js/main.2ca06b05.js"
   ]
 }
