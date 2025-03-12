@@ -7,56 +7,56 @@ const galleryImages = [
   {
     id: 1,
     src: getImageUrl('Garth_Brooks.jpeg'),
-    alt: 'Garth Brooks - Country music superstar',
-    category: 'contemporary',
+    alt: 'Garth Brooks - Music superstar',
+    category: 'music',
     featured: true
   },
   {
     id: 2,
     src: getImageUrl('Eric_Church.jpeg'),
     alt: 'Eric Church in concert',
-    category: 'contemporary',
+    category: 'music',
     featured: false
   },
   {
     id: 3,
     src: getImageUrl('Keith_Urban.jpeg'),
     alt: 'Keith Urban performing live',
-    category: 'contemporary',
+    category: 'music',
     featured: false
   },
   {
     id: 4,
     src: getImageUrl('Faith_Hill-Tim_McGraw.jpeg'),
-    alt: 'Faith Hill and Tim McGraw - Country power couple',
-    category: 'contemporary',
+    alt: 'Faith Hill and Tim McGraw - Music power couple',
+    category: 'music',
     featured: true
   },
   {
     id: 5,
     src: getImageUrl('Brad_Paisley.jpeg'),
     alt: 'Brad Paisley with his guitar',
-    category: 'contemporary',
+    category: 'music',
     featured: false
   },
   {
     id: 6,
     src: getImageUrl('Luke_Bryan.jpeg'),
     alt: 'Luke Bryan on stage',
-    category: 'contemporary',
+    category: 'music',
     featured: false
   },
   {
     id: 7,
     src: getImageUrl('Kenny_Chesney.jpeg'),
     alt: 'Kenny Chesney concert experience',
-    category: 'contemporary',
+    category: 'music',
     featured: false
   },
   {
     id: 8,
     src: getImageUrl('Brett_Kissel.jpeg'),
-    alt: 'Brett Kissel - Canadian country star',
+    alt: 'Brett Kissel - Canadian star',
     category: 'canadian',
     featured: true
   },
@@ -64,13 +64,13 @@ const galleryImages = [
     id: 9,
     src: getImageUrl('Dierks_Bentley.jpeg'),
     alt: 'Dierks Bentley performing',
-    category: 'contemporary',
+    category: 'music',
     featured: false
   },
   {
     id: 10,
     src: getImageUrl('Little_Big_Town.jpeg'),
-    alt: 'Little Big Town - Award-winning country group',
+    alt: 'Little Big Town - Award-winning music group',
     category: 'groups',
     featured: false
   },
@@ -84,71 +84,71 @@ const galleryImages = [
   {
     id: 12,
     src: getImageUrl('Brooks_&_Dunn.jpeg'),
-    alt: 'Brooks & Dunn - Legendary country duo',
+    alt: 'Brooks & Dunn - Legendary duo',
     category: 'groups',
     featured: true
   },
   {
     id: 13,
     src: getImageUrl('George_Jones.jpeg'),
-    alt: 'George Jones - Country music legend',
-    category: 'classic',
+    alt: 'George Jones - Music legend',
+    category: 'legends',
     featured: true
   },
   {
     id: 14,
     src: getImageUrl('Tammy_Wynette.jpeg'),
-    alt: 'Tammy Wynette - First Lady of Country Music',
-    category: 'classic',
+    alt: 'Tammy Wynette - Music icon',
+    category: 'legends',
     featured: false
   },
   {
     id: 15,
     src: getImageUrl('Merle_Haggard.jpeg'),
-    alt: 'Merle Haggard - Country music icon',
-    category: 'classic',
+    alt: 'Merle Haggard - Music icon',
+    category: 'legends',
     featured: false
   },
   {
     id: 16,
     src: getImageUrl('Marty_Haggard.jpeg'),
     alt: 'Marty Haggard performing',
-    category: 'classic',
+    category: 'legends',
     featured: false
   },
   {
     id: 17,
     src: getImageUrl('Georgette_Jones.jpeg'),
     alt: 'Georgette Jones - Daughter of George Jones and Tammy Wynette',
-    category: 'classic',
+    category: 'legends',
     featured: false
   },
   {
     id: 18,
     src: getImageUrl('Dwight_Yoakum.jpeg'),
-    alt: 'Dwight Yoakam - Country star with distinctive style',
-    category: 'classic',
+    alt: 'Dwight Yoakam - Star with distinctive style',
+    category: 'legends',
     featured: false
   },
   {
     id: 19,
     src: getImageUrl('The_Kentucky_Headhunters.jpeg'),
-    alt: 'The Kentucky Headhunters - Southern rock and country group',
+    alt: 'The Kentucky Headhunters - Rock and music group',
     category: 'groups',
     featured: false
   },
   {
     id: 20,
     src: getImageUrl('Randy_Travis.jpeg'),
-    alt: 'Randy Travis - Influential country artist',
-    category: 'classic',
+    alt: 'Randy Travis - Influential artist',
+    category: 'legends',
     featured: false
   },
   {
     id: 21,
     src: getImageUrl('Charlie_Daniels.jpeg'),
-    alt: 'Charlie Daniels - Southern rock legend',
-    category: 'classic',
+    alt: 'Charlie Daniels - Music legend',
+    category: 'legends',
     featured: false
   },
   {
@@ -162,7 +162,7 @@ const galleryImages = [
     id: 23,
     src: getImageUrl('Travis_Tritt.jpeg'),
     alt: 'Travis Tritt performing',
-    category: 'contemporary',
+    category: 'music',
     featured: false
   },
   {
@@ -180,8 +180,8 @@ const GalleryPage: React.FC = () => {
   
   const filters = [
     { id: 'all', label: 'All Stars' },
-    { id: 'contemporary', label: 'Contemporary Country' },
-    { id: 'classic', label: 'Classic Country' },
+    { id: 'music', label: 'Music Artists' },
+    { id: 'legends', label: 'Legendary Icons' },
     { id: 'groups', label: 'Groups & Duos' },
     { id: 'canadian', label: 'Canadian Artists' },
     { id: 'other', label: 'Other Celebrities' }
@@ -222,9 +222,9 @@ const GalleryPage: React.FC = () => {
       <section className="relative py-20 bg-dark-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Country Music Stars</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Celebrity Photo Gallery</h1>
             <p className="text-xl text-gray-300">
-              Browse through photos of country music legends and stars I've had the pleasure to meet
+              Browse through photos of music stars and celebrities I've had the pleasure to meet
             </p>
           </div>
         </div>

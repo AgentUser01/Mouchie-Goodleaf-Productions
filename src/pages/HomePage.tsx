@@ -13,20 +13,20 @@ const HomePage: React.FC = () => {
   const testimonials = [
     {
       name: "George Jones",
-      role: "Country Music Legend",
-      text: "Mouchie's knowledge of classic country is incredible. He's keeping the spirit of traditional country music alive with his collection and presentations.",
+      role: "Music Legend",
+      text: "Mouchie's knowledge of music is incredible. He's keeping the spirit of authentic music alive with his collection and presentations.",
       image: getImageUrl('George_Jones.jpeg')
     },
     {
       name: "Tammy Wynette",
-      role: "First Lady of Country Music",
-      text: "I've been impressed by Mouchie's dedication to preserving country music history while creating modern entertainment experiences.",
+      role: "Recording Artist",
+      text: "I've been impressed by Mouchie's dedication to preserving music history while creating modern entertainment experiences.",
       image: getImageUrl('Tammy_Wynette.jpeg')
     },
     {
       name: "Merle Haggard",
-      role: "Country Music Icon",
-      text: "Working with Mouchie was a pleasure. His passion for authentic country music shows in everything he does.",
+      role: "Music Icon",
+      text: "Working with Mouchie was a pleasure. His passion for authentic music shows in everything he does.",
       image: getImageUrl('Merle_Haggard.jpeg')
     }
   ];
@@ -69,7 +69,7 @@ const HomePage: React.FC = () => {
               className="rounded-full w-40 h-40 mx-auto mb-6 border-4 border-primary-500"
             />
             <p className="text-xl md:text-2xl text-gray-200 mb-8">
-              Country Music Entertainment Specialist
+              Professional Music & Entertainment
             </p>
           </motion.div>
           <motion.div 
@@ -119,12 +119,12 @@ const HomePage: React.FC = () => {
               viewport={{ once: true }}
               className="md:w-1/2"
             >
-              <h2 className="text-3xl font-bold mb-6">Your Country Music Entertainment Specialist</h2>
+              <h2 className="text-3xl font-bold mb-6">Your Professional Entertainment Specialist</h2>
               <p className="text-lg text-gray-300 mb-6">
-                With over 25 years in the music industry and connections to many country music legends, Mouchie GoodLeaf brings authentic country music entertainment to your events.
+                With over 25 years in the music industry and connections to many legendary artists, Mouchie GoodLeaf brings authentic entertainment to your events.
               </p>
               <p className="text-lg text-gray-300 mb-8">
-                From classic country to modern hits, I provide personalized music experiences that create lasting memories.
+                From classic hits to modern favorites, I provide personalized music experiences that create lasting memories.
               </p>
               <Link 
                 to="/about" 
@@ -141,9 +141,9 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Country Music Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Professional Music Services</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From weddings to corporate events, I'll bring authentic country music to create the perfect atmosphere
+              From weddings to corporate events, I'll bring the perfect music to create the ideal atmosphere
             </p>
           </div>
           
@@ -151,7 +151,7 @@ const HomePage: React.FC = () => {
             {[
               {
                 title: "Weddings & Events",
-                description: "Create unforgettable moments with personalized country music selections for your special day.",
+                description: "Create unforgettable moments with personalized music selections for your special day.",
                 icon: "🎵",
                 image: getImageUrl('Randy_Travis.jpeg')
               },
@@ -163,7 +163,7 @@ const HomePage: React.FC = () => {
               },
               {
                 title: "Private Parties",
-                description: "Turn your celebration into a memorable country music experience with custom playlists.",
+                description: "Turn your celebration into a memorable music experience with custom playlists.",
                 icon: "🎧",
                 image: getImageUrl('Travis_Tritt.jpeg')
               }
@@ -210,9 +210,9 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-dark-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Country Music Connections</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Industry Connections</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              I've had the privilege of meeting some of country music's greatest legends
+              I've had the privilege of meeting some of music's greatest legends
             </p>
           </div>
           
@@ -263,9 +263,9 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-black overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Country Music Stars</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Celebrity Connections</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Take a look at some of the country music stars I've had the privilege to meet
+              Take a look at some of the music stars I've had the privilege to meet
             </p>
           </div>
           
@@ -312,9 +312,9 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="max-w-3xl mx-auto text-center relative z-10 fade-in">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready for Country Music Entertainment?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready for Professional Entertainment?</h2>
               <p className="text-xl text-white/90 mb-8">
-                Contact me today to discuss your event and create a customized country music experience
+                Contact me today to discuss your event and create a customized music experience
               </p>
               <Link 
                 to="/contact" 

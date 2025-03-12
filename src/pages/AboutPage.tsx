@@ -22,7 +22,7 @@ const AboutPage: React.FC = () => {
               className="md:w-1/2 mb-10 md:mb-0"
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-6">About Mouchie GoodLeaf</h1>
-              <p className="text-xl text-gray-300 mb-8">Professional DJ and country music enthusiast with a passion for creating unforgettable musical experiences.</p>
+              <p className="text-xl text-gray-300 mb-8">Professional DJ and music enthusiast with a passion for creating unforgettable musical experiences.</p>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
@@ -61,10 +61,10 @@ const AboutPage: React.FC = () => {
             <div className="fade-in">
               <h2 className="text-3xl font-bold mb-6">My Story</h2>
               <p className="text-lg mb-4">
-                Welcome to Mouchie GoodLeaf Productions! I've been deeply involved in the music industry for over 25 years, specializing in country music and delivering exceptional entertainment experiences across various venues and events.
+                Welcome to Mouchie GoodLeaf Productions! I've been deeply involved in the music industry for over 25 years, specializing in delivering exceptional entertainment experiences across various venues and events.
               </p>
               <p className="text-lg mb-4">
-                My journey in music has allowed me to meet and work with some of the biggest names in country music, creating connections that enhance the authenticity of every event I'm part of.
+                My journey in music has allowed me to meet and work with some of the biggest names in the industry, creating connections that enhance the authenticity of every event I'm part of.
               </p>
               <p className="text-lg mb-6">
                 Whether you're planning a wedding, corporate event, or private party, I bring professional equipment, an extensive music library, and the expertise to read any crowd and keep your guests entertained.
@@ -75,7 +75,7 @@ const AboutPage: React.FC = () => {
                   <span className="text-primary-500 font-bold">Personalized Service</span>
                 </div>
                 <div className="px-6 py-3 bg-dark-50 rounded-lg">
-                  <span className="text-primary-500 font-bold">Country Expertise</span>
+                  <span className="text-primary-500 font-bold">Music Expertise</span>
                 </div>
                 <div className="px-6 py-3 bg-dark-50 rounded-lg">
                   <span className="text-primary-500 font-bold">Professional Equipment</span>
@@ -94,9 +94,9 @@ const AboutPage: React.FC = () => {
       <section className="py-20 bg-dark-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Country Music Connections</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Celebrity Connections</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Throughout my career, I've had the honor of meeting some of country music's greatest legends
+              Throughout my career, I've had the honor of meeting some of music's greatest legends
             </p>
           </div>
           
@@ -107,9 +107,9 @@ const AboutPage: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2">Classic Country</h3>
+              <h3 className="text-xl font-bold mb-2">Legendary Artists</h3>
               <p className="text-gray-400">
-                I've had the privilege of meeting legends like George Jones, Tammy Wynette, and Merle Haggard, carrying their musical legacy into my performances.
+                I've had the privilege of meeting icons like George Jones, Tammy Wynette, and Merle Haggard, carrying their musical legacy into my performances.
               </p>
             </div>
             
@@ -121,7 +121,7 @@ const AboutPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold mb-2">Contemporary Stars</h3>
               <p className="text-gray-400">
-                From Garth Brooks to Keith Urban and Eric Church, I've connected with today's biggest stars, keeping my finger on the pulse of current country music trends.
+                From Garth Brooks to Keith Urban and Eric Church, I've connected with today's biggest stars, keeping my finger on the pulse of current music trends.
               </p>
             </div>
             
@@ -133,7 +133,7 @@ const AboutPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold mb-2">Custom Event Planning</h3>
               <p className="text-gray-400">
-                With extensive experience and industry connections, I can create custom music packages featuring your favorite country artists for any event.
+                With extensive experience and industry connections, I can create custom music packages featuring your favorite artists for any event.
               </p>
             </div>
           </div>
@@ -147,20 +147,20 @@ const AboutPage: React.FC = () => {
             <div className="lg:w-1/2 fade-in">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="bg-dark-50 p-6 rounded-xl">
-                  <h4 className="text-lg font-bold mb-2">Country Classics</h4>
-                  <p className="text-gray-400">From Johnny Cash to Dolly Parton</p>
+                  <h4 className="text-lg font-bold mb-2">Classic Hits</h4>
+                  <p className="text-gray-400">From legendary artists to timeless songs</p>
                 </div>
                 <div className="bg-dark-50 p-6 rounded-xl">
-                  <h4 className="text-lg font-bold mb-2">Modern Country</h4>
-                  <p className="text-gray-400">Luke Combs to Miranda Lambert</p>
+                  <h4 className="text-lg font-bold mb-2">Modern Tracks</h4>
+                  <p className="text-gray-400">Latest hits that keep the dance floor full</p>
                 </div>
                 <div className="bg-dark-50 p-6 rounded-xl">
-                  <h4 className="text-lg font-bold mb-2">Country Rock</h4>
-                  <p className="text-gray-400">Eagles to Zac Brown Band</p>
+                  <h4 className="text-lg font-bold mb-2">Rock & Pop</h4>
+                  <p className="text-gray-400">From classics to contemporary favorites</p>
                 </div>
                 <div className="bg-dark-50 p-6 rounded-xl">
-                  <h4 className="text-lg font-bold mb-2">Crossover Hits</h4>
-                  <p className="text-gray-400">Popular music with country influence</p>
+                  <h4 className="text-lg font-bold mb-2">Diverse Genres</h4>
+                  <p className="text-gray-400">Music for every taste and occasion</p>
                 </div>
               </div>
             </div>
@@ -168,10 +168,10 @@ const AboutPage: React.FC = () => {
             <div className="lg:w-1/2 fade-in">
               <h2 className="text-3xl font-bold mb-6">Music Expertise</h2>
               <p className="text-lg mb-6">
-                With a deep love for country music and a vast collection spanning decades, I can create the perfect musical atmosphere for your event. From line dancing classics to modern country hits, I've got you covered.
+                With a deep love for music and a vast collection spanning decades and genres, I can create the perfect musical atmosphere for your event. From classic favorites to the latest hits, I've got you covered.
               </p>
               <p className="text-lg mb-6">
-                My knowledge of country music history and connections with artists ensures an authentic experience that goes beyond just playing tracks. I bring stories, context, and genuine passion to every performance.
+                My knowledge of music history and connections with artists ensures an authentic experience that goes beyond just playing tracks. I bring stories, context, and genuine passion to every performance.
               </p>
               
               <Link to="/services" className="btn bg-primary-500 hover:bg-primary-600 text-white">
@@ -195,7 +195,7 @@ const AboutPage: React.FC = () => {
             <div className="max-w-3xl mx-auto text-center relative z-10 fade-in">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Book Your Event?</h2>
               <p className="text-xl text-white/90 mb-8">
-                Get in touch to check availability and discuss how I can make your event unforgettable with the perfect country music experience.
+                Get in touch to check availability and discuss how I can make your event unforgettable with the perfect music experience.
               </p>
               <Link 
                 to="/contact" 
